@@ -55,7 +55,7 @@ namespace ToyRobot
         {
             try
             {
-                string commandType = input.Substring(0, input.IndexOf(" ") > 0 ? input.IndexOf(" ") : input.Length);
+                string commandType = input.Substring(0, input.IndexOf(" ") > 0 ? input.IndexOf(" ") : input.Length).ToLower();
                 input = input.Remove(0, commandType.Length);
                 var parsedInput = input.Trim().ToLower().Split(',');
                 if (commandType == "place" && parsedInput.Length > 0)
